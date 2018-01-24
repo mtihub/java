@@ -1,16 +1,3 @@
-/*
- * CSE 3504
- * Project Part 2
- * PRACTICE 1
- * 
- * Authors: Md Tanvirul Islam
- * 			Smit Shah
- * 
- * 04/28/2017
- */
-
-
-
 import java.io.File;
 import java.io.IOException;
 import java.io.PrintWriter;
