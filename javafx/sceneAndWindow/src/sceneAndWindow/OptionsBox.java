@@ -9,7 +9,7 @@ import javafx.stage.*;
 public class OptionsBox {
 	static boolean choice;
 	
-	public static void display(String title, String message) {
+	public static boolean display(String title, String message) {
 		Stage window = new Stage();
 		window.initModality(Modality.APPLICATION_MODAL);
 		window.setTitle(title);
@@ -36,7 +36,9 @@ public class OptionsBox {
 		
 		Scene scene = new Scene(layout, 250, 200);
 		window.setScene(scene);
-		window.show();
+		window.showAndWait();
+
+		return choice;
 	}
 
 

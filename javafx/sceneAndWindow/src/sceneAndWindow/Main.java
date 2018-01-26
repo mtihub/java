@@ -18,7 +18,10 @@ public class Main extends Application {
 	public void start(Stage primaryStage) throws Exception {
 		Button button = new Button();
 		button.setText("Do you wish to enter the Matrix?");
-		button.setOnAction(e -> OptionsBox.display("Matrix", "Choose your fate, Neo"));
+		button.setOnAction(e -> {
+			boolean choice = OptionsBox.display("Matrix", "Choose your fate, Neo");
+			System.out.println(choice);
+		});
 		
 		StackPane layout = new StackPane();
 		layout.getChildren().add(button);
