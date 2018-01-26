@@ -16,11 +16,16 @@ public class Main extends Application {
 
 	@Override
 	public void start(Stage primaryStage) throws Exception {
+		primaryStage.setOnCloseRequest(e -> {
+			e.consume();
+			closeProgram(primaryStage);
+		});
+		
 		Button button = new Button();
-		button.setText("Do you wish to enter the Matrix?");
+		button.setText("Close");
+		
 		button.setOnAction(e -> {
-			boolean choice = OptionsBox.display("Matrix", "Choose your fate, Neo");
-			System.out.println(choice);
+			closeProgram(primaryStage);
 		});
 		
 		StackPane layout = new StackPane();
@@ -29,6 +34,13 @@ public class Main extends Application {
 		Scene scene = new Scene(layout, 400, 300);
 		primaryStage.setScene(scene);
 		primaryStage.show();
+	}
+	
+	public static void closeProgram(Stage stage) {
+		boolean choice = OptionsBox.display("Sure?", "Are you sure you want to exit?");
+		if (choice) {
+			stage.close();
+		}
 	}
 	
 }
