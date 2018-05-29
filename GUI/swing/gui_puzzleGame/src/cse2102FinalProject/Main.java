@@ -2,8 +2,8 @@ package cse2102FinalProject;
 
 import java.util.Random;
 
-//import sun.audio.*;
-//import java.io.FileInputStream;
+import sun.audio.*;
+import java.io.FileInputStream;
 
 
 class Main// extends JFrame implements ActionListener
@@ -12,12 +12,12 @@ class Main// extends JFrame implements ActionListener
 	public static void main(String args[])
 	{	
 		new MainJFrame();
-		//music();
+		music();
 		
 		
 	}
 	
-	/*
+	
 	private static void music()
 	{
 		AudioPlayer MGP = AudioPlayer.player;
@@ -39,5 +39,5 @@ class Main// extends JFrame implements ActionListener
 	    
 	    MGP.start(loop);
 	}
-	*/
+	
 }
